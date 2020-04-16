@@ -1,2 +1,2 @@
-# missionz3r0-character-template
+# Jix the Ratfolk
 A tiddlywiki template for characters I make
