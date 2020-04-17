@@ -161,6 +161,8 @@ Error message and password prompt
 
 <li>$:/GitHub/Username</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/SiteSubtitle</li>
@@ -175,6 +177,8 @@ Error message and password prompt
 
 <li>$:/state/tab--2112689675</li>
 
+<li>$:/state/tab--959111941</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -184,6 +188,8 @@ Error message and password prompt
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
 <li>$:/StoryList</li>
+
+<li>$:/temp/HidePluginWarning</li>
 
 <li>$:/temp/info-plugin</li>
 
@@ -9659,6 +9665,34 @@ Error message and password prompt
 <div created="20200416162131278" modified="20200416162131278" title="$:/GitHub/Username">
 <pre>missionz3r0-characters</pre>
 </div>
+<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/.tb/modules/startup/hide-sidebar.js&quot;: {
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/.tb/modules/startup/hide-sidebar.js\ntype: application/javascript\nmodule-type: startup\ncreated: 20151010151732122\ncreator: Tobias Beer\nmodified: 20151010151750739\n\nHides the sidebar on startup when the config tiddler [[$:/config/hide-sidebar-on-startup]] contains \&quot;yes\&quot;\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Export name and synchronous status\nexports.name = \&quot;hide-sidebar-on-startup\&quot;;\nexports.platforms = [\&quot;browser\&quot;];\nexports.after = [\&quot;startup\&quot;];\nexports.synchronous = true;\n\nexports.startup = function() {\n\tvar conf = $tw.wiki.getTiddler(\&quot;$:/config/HideSidebarOnStartup\&quot;),\n\t\tvalue = (conf ? conf.getFieldString(\&quot;text\&quot;) : \&quot;\&quot;).toLowerCase(),\n\t\tstate = value == \&quot;yes\&quot; ? \&quot;no\&quot; : \&quot;yes\&quot;;\n\t$tw.wiki.setText(\&quot;$:/state/sidebar\&quot;, \&quot;text\&quot;, undefined, state);\n};\n\n})();&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;title&quot;: &quot;$:/.tb/modules/startup/hide-sidebar.js&quot;,
+            &quot;module-type&quot;: &quot;startup&quot;,
+            &quot;modified&quot;: &quot;20151010151750739&quot;,
+            &quot;creator&quot;: &quot;Tobias Beer&quot;,
+            &quot;created&quot;: &quot;20151010151732122&quot;
+        },
+        &quot;$:/config/HideSidebarOnStartup&quot;: {
+            &quot;text&quot;: &quot;no&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/config/HideSidebarOnStartup&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20151010151831027&quot;,
+            &quot;creator&quot;: &quot;Tobias Beer&quot;,
+            &quot;created&quot;: &quot;20151007165524815&quot;
+        }
+    }
+}</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
@@ -9671,29 +9705,35 @@ Error message and password prompt
 <div created="20200416200031353" modified="20200416200031353" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416193713641" modified="20200416194014696" title="$:/state/sidebar">
+<div created="20200416193713641" modified="20200417162556700" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200416195546068" modified="20200417162238897" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20200416162105274" modified="20200416221540197" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Basics</pre>
+<div created="20200416162105274" modified="20200417163055380" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
-<div created="20200416162118644" modified="20200417162244222" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Settings</pre>
+<div created="20200417163057522" modified="20200417163057522" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/LoadedModules</pre>
+</div>
+<div created="20200416162118644" modified="20200417163054352" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20200416162120905" modified="20200416194157421" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20200416170218210" modified="20200417161510742" title="$:/state/tab/sidebar--595412856">
+<div created="20200416170218210" modified="20200417162554060" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
-<div created="20200417161603416" list="Jix [[Year: 4698]]" modified="20200417162434396" title="$:/StoryList">
+<div created="20200417163045787" list="$:/Import $:/ControlPanel Jix" modified="20200417163109078" title="$:/StoryList">
 <pre></pre>
+</div>
+<div created="20200417163239459" modified="20200417163239459" title="$:/temp/HidePluginWarning">
+<pre>yes</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
